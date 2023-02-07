@@ -6,9 +6,58 @@ package learn.java;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+
 class AppTest {
-    @Test void appHasAGreeting() {
+    @Test
+    void appHasAGreeting() {
         App classUnderTest = new App();
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+
+        System.out.println("hoge");
     }
+
+    @BeforeAll
+    static void beforeAll1() {
+        System.out.println("beforeAll1");
+    }
+
+    @BeforeAll
+    static void beforeAll2() {
+        System.out.println("beforeAll2");
+    }
+
+    @BeforeEach
+    void beforeEach1() {
+        System.out.println("beforeEach1");
+    }
+
+    @BeforeEach
+    void beforeEach2() {
+        System.out.println("beforeEach2");
+    }
+
+    @AfterEach
+    void afterEach1() {
+        System.out.println("afterEach1");
+    }
+
+    @AfterEach
+    void afterEach2() {
+        System.out.println("afterEach2");
+    }
+
+    @AfterAll
+    static void afterAll2() {
+        System.out.println("afterAll2");
+    }
+
+    @AfterAll
+    static void afterAll1() {
+        System.out.println("afterAll1");
+    }
+
 }

@@ -22,7 +22,9 @@ public class HelloTest {
         System.out.println("test2");
     }
 
-    // ↓Before/After 系がなぜか実行されない...なぞ
+    // Before/After 系がなぜか実行されない
+    // Gradle プロジェクトだと実行される
+    // なぞ
     @BeforeAll
     static void beforeAll1() {
         System.out.println("BeforeAll1");
