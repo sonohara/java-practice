@@ -1,4 +1,11 @@
-## Java Practice
+## Learn Java
+
+Java をお勉強する際に調べたことや動かしたコードスニペットなどをまとめておく
+
+```
+_sandbox: 単体で動かしたいもの
+他: Gradle プロジェクトで動かしたいもの
+```
 
 ### Doc
 Javs SE ドキュメント
@@ -7,6 +14,9 @@ Javs SE ドキュメント
 ### 環境構築
 VS Code で Java
 - https://code.visualstudio.com/docs/java/java-tutorial
+
+トラブルシューティング
+- [`[Java] The declared package "com.github.****" does not match the expected package`](https://github.com/redhat-developer/vscode-java/issues/274)
 
 ### 参考
 Java9から17で入った新機能ピックアップ

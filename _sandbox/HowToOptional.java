@@ -1,3 +1,5 @@
+package _sandbox;
+
 import java.util.Optional;
 
 /**
@@ -20,7 +22,7 @@ public class HowToOptional {
         HowToOptional.ifPresent();
     }
 
-    protected static void of () {
+    protected static void of() {
         System.out.println("of  ------------------");
 
         // https://docs.oracle.com/javase/jp/17/docs/api/java.base/java/util/Optional.html#of(T)
@@ -36,15 +38,15 @@ public class HowToOptional {
         // https://docs.oracle.com/javase/jp/17/docs/api/java.base/java/util/Optional.html#ofNullable(T)
         // こっちは引数が null でぬるぽは発生しない
         Optional<String> o = Optional.ofNullable(null);
-        o.ifPresent(System.out::println);  // なにも出力されない
+        o.ifPresent(System.out::println); // なにも出力されない
     }
 
-    protected static void empty()  {
+    protected static void empty() {
         System.out.println("empty  ------------------");
 
         // https://docs.oracle.com/javase/jp/17/docs/api/java.base/java/util/Optional.html#empty()
         Optional<String> o = Optional.empty();
-        o.ifPresent(System.out::println);   // なにも出力されない
+        o.ifPresent(System.out::println); // なにも出力されない
     }
 
     protected static void orElse() {
@@ -56,7 +58,8 @@ public class HowToOptional {
         Optional<String> o = Optional.ofNullable(p);
         String v = o.orElse(HowToOptional._getFuga());
         // p = hoge の場合は hoge、p = null の場合は fuga が出力される
-        // orElse で指定した値は必ず評価されるため、p = hoge の場合でも _getFuga() は実行される（p = null の場合は当然実行される）
+        // orElse で指定した値は必ず評価されるため、p = hoge の場合でも _getFuga() は実行される（p = null
+        // の場合は当然実行される）
         // -> 実行させたくない場合は orElseGet() を使う
         System.out.println(v);
     }
@@ -92,7 +95,7 @@ public class HowToOptional {
         }
 
     }
-    
+
     private static void ifPresent() {
         System.out.println("ifPresent  ------------------");
 

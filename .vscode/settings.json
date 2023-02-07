@@ -1,5 +1,9 @@
 {
     "java.project.referencedLibraries": [
         "test-lib\\**\\*.jar"
+    ],
+    // https://github.com/redhat-developer/vscode-java/issues/274#issuecomment-829534246
+    "java.project.sourcePaths": [
+        ""
     ]
 }

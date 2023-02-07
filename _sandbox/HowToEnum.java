@@ -1,3 +1,5 @@
+package _sandbox;
+
 import java.util.EnumSet;
 
 public class HowToEnum {
