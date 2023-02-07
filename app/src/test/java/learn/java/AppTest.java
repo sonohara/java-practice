@@ -10,14 +10,23 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Nested;
 
 class AppTest {
     @Test
-    void appHasAGreeting() {
+    void test1() {
         App classUnderTest = new App();
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
 
-        System.out.println("hoge");
+        System.out.println("test1");
+    }
+
+    @Nested
+    class NestedTest {
+        @Test
+        void testNested1() {
+            System.out.println("nestedTest");
+        }
     }
 
     @BeforeAll
